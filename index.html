@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeta</title>
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Font! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-900 antialiased m-0 p-0">
+    <!-- ==================== SECTION 1: HERO and NAVBAR ==================== -->
+    <section
+      class="relative w-full min-h-[500px] md:min-h-[580px] overflow-hidden grid grid-rows-[auto_1fr] items-center p-6 md:p-10 text-center shadow-lg"
+    >
+      <!-- Background Hero Section -->
+      <img
+        src="https://images3.alphacoders.com/138/1388705.jpg"
+        alt="hero-img"
+        class="absolute w-full h-full object-cover object-center z-0"
+      />
+
+      <!-- Dark Gradient Overlay for optimal contrast -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70 z-0"
+      ></div>
+
+      <!-- NAVBAR (Perfectly Balanced Scale & Alignment) -->
+      <nav
+        class="relative z-10 max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-4 min-h-[44px]"
+      >
+        <!-- 1. Left: Logo -->
+        <div class="flex items-center h-10">
+          <a href="#" class="text-xl font-bold text-white tracking-tight leading-none"
+            >Logo</a
+          >
+        </div>
+
+        <!-- 2. Center: Menu Links (Balanced Capsule) -->
+        <div
+          class="flex items-center bg-white/20 backdrop-blur-md border border-white/30 rounded-full p-1 text-xs md:text-sm font-medium text-white shadow-sm"
+        >
+          <!-- Active Tab -->
+          <a
+            href="#"
+            class="px-3.5 py-1.5 bg-white/40 text-white rounded-full transition font-semibold"
+            >New Arrivals</a
+          >
+          <!-- Inactive Tabs -->
+          <a href="#" class="px-3.5 py-1.5 hover:text-white/80 transition"
+            >Best Seller</a
+          >
+          <a href="#" class="px-3.5 py-1.5 hover:text-white/80 transition"
+            >League</a
+          >
+          <a href="#" class="px-3.5 py-1.5 hover:text-white/80 transition"
+            >Collections</a
+          >
+          <a href="#" class="px-3.5 py-1.5 hover:text-white/80 transition"
+            >On Sale</a
+          >
+        </div>
+
+        <!-- 3. Right: Search & Action Icons -->
+        <div class="flex items-center space-x-4 h-10">
+          <!-- Search Bar -->
+          <div class="relative flex items-center">
+            <svg
+              class="w-4 h-4 text-white z-10 absolute left-3 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search"
+              class="pl-9 pr-4 py-2 w-44 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white/50 h-9"
+            />
+          </div>
+
+          <!-- Icons: Wishlist, Cart, Profile -->
+          <div class="flex items-center space-x-3.5 text-white">
+            <!-- Heart Icon (Wishlist) -->
+            <a href="#" class="hover:text-gray-300 transition p-1" aria-label="Wishlist">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </a>
+
+            <!-- Cart Icon -->
+            <a href="#" class="hover:text-gray-300 transition p-1" aria-label="Cart">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </a>
+
+            <!-- User/Profile Icon -->
+            <a href="#" class="hover:text-gray-300 transition p-1" aria-label="Profile">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HERO TEXT CONTENT -->
+      <div
+        class="relative z-10 max-w-7xl w-full mx-auto my-auto grid grid-cols-1 items-center justify-items-center text-center gap-3"
+      >
+        <h1
+          class="text-7xl font-extrabold text-white"
+        >
+          Zeta
+        </h1>
+        <p class="text-gray-100 text-xl font-light">
+          Wear Your Passion, Back Your Team.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINER FOR REST OF SECTIONS -->
+   
+      <!-- ==================== SECTION 2: PROMO BAR ==================== -->
+      <section class="bg-[#D3D648] py-6 px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="h-12 bg-[#1E0E8A] rounded-lg grid place-items-center font-medium text-white"
+          >
+            Free Shipping
+          </div>
+          <div
+            class="h-12 bg-[#1E0E8A] rounded-lg grid place-items-center font-medium text-white"
+          >
+            Cash on Delivery (COD)
+          </div>
+          <div
+           class="h-12 bg-[#1E0E8A] rounded-lg grid place-items-center font-medium text-white"
+          >
+            Return within 14 days
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 3: NEW ARRIVALS ==================== -->
+       <main class="max-w-7xl mx-auto px-6 space-y-16 py-12">
+      <section>
+        <h2 class="text-2xl font-bold tracking-tight mb-6">New Arrivals</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Loop Card Template x4 -->
+          <article
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+            >
+              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mt-4 space-y-2">
+              <div class="w-12 h-3 bg-gray-200 rounded"></div>
+              <div class="w-full h-4 bg-gray-200 rounded"></div>
+              <div class="w-16 h-4 bg-gray-200 rounded"></div>
+              <button
+                class="w-full mt-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded-full hover:bg-black"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+            >
+              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mt-4 space-y-2">
+              <div class="w-12 h-3 bg-gray-200 rounded"></div>
+              <div class="w-full h-4 bg-gray-200 rounded"></div>
+              <div class="w-16 h-4 bg-gray-200 rounded"></div>
+              <button
+                class="w-full mt-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded-full hover:bg-black"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+            >
+              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mt-4 space-y-2">
+              <div class="w-12 h-3 bg-gray-200 rounded"></div>
+              <div class="w-full h-4 bg-gray-200 rounded"></div>
+              <div class="w-16 h-4 bg-gray-200 rounded"></div>
+              <button
+                class="w-full mt-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded-full hover:bg-black"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+            >
+              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mt-4 space-y-2">
+              <div class="w-12 h-3 bg-gray-200 rounded"></div>
+              <div class="w-full h-4 bg-gray-200 rounded"></div>
+              <div class="w-16 h-4 bg-gray-200 rounded"></div>
+              <button
+                class="w-full mt-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded-full hover:bg-black"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 3 (CONT.): BEST SELLER ==================== -->
+      <section>
+        <h2 class="text-2xl font-bold tracking-tight mb-6">Best Seller</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm"
+          >
+            <div
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+            >
+              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mt-4 space-y-2">
+              <div class="w-12 h-3 bg-gray-200 rounded"></div>
+              <div class="w-full h-4 bg-gray-200 rounded"></div>
+              <div class="w-16 h-4 bg-gray-200 rounded"></div>
+              <button
+                class="w-full mt-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm"
+          >
+            <div
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+            >
+              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mt-4 space-y-2">
+              <div class="w-12 h-3 bg-gray-200 rounded"></div>
+              <div class="w-full h-4 bg-gray-200 rounded"></div>
+              <div class="w-16 h-4 bg-gray-200 rounded"></div>
+              <button
+                class="w-full mt-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm"
+          >
+            <div
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+            >
+              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mt-4 space-y-2">
+              <div class="w-12 h-3 bg-gray-200 rounded"></div>
+              <div class="w-full h-4 bg-gray-200 rounded"></div>
+              <div class="w-16 h-4 bg-gray-200 rounded"></div>
+              <button
+                class="w-full mt-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm"
+          >
+            <div
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+            >
+              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+            </div>
+            <div class="mt-4 space-y-2">
+              <div class="w-12 h-3 bg-gray-200 rounded"></div>
+              <div class="w-full h-4 bg-gray-200 rounded"></div>
+              <div class="w-16 h-4 bg-gray-200 rounded"></div>
+              <button
+                class="w-full mt-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded-full"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 4: SHOP BY LEAGUE ==================== -->
+      <section>
+        <h2 class="text-2xl font-bold tracking-tight mb-6">Shop by League</h2>
+        <div class="relative flex items-center">
+          <!-- Previous Arrow -->
+          <button
+            class="absolute -left-4 z-10 w-9 h-9 bg-white border border-gray-400 rounded-full flex items-center justify-center shadow hover:bg-gray-100"
+          >
+            ❮
+          </button>
+
+          <!-- League Items Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full px-2">
+            <div
+              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500"
+            >
+              League 1
+            </div>
+            <div
+              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500"
+            >
+              League 2
+            </div>
+            <div
+              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500"
+            >
+              League 3
+            </div>
+            <div
+              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500"
+            >
+              League 4
+            </div>
+          </div>
+
+          <!-- Next Arrow -->
+          <button
+            class="absolute -right-4 z-10 w-9 h-9 bg-white border border-gray-400 rounded-full flex items-center justify-center shadow hover:bg-gray-100"
+          >
+            ❯
+          </button>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 5: COLLECTIONS (BENTO GRID) ==================== -->
+      <section>
+        <h2 class="text-2xl font-bold tracking-tight mb-6">Collections</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Left Big Card -->
+          <div
+            class="md:row-span-2 border border-gray-300 rounded-2xl p-6 flex flex-col justify-between bg-gray-50 min-h-[420px]"
+          >
+            <div>
+              <div class="w-16 h-16 bg-gray-300 rounded-lg mb-6"></div>
+              <div class="w-3/4 h-5 bg-gray-300 rounded mb-2"></div>
+              <div class="w-1/2 h-5 bg-gray-300 rounded mb-2"></div>
+              <div class="w-1/3 h-5 bg-gray-300 rounded"></div>
+            </div>
+            <button
+              class="self-end px-6 py-2 bg-gray-800 text-white rounded-lg text-xs font-semibold"
+            >
+              Explore
+            </button>
+          </div>
+
+          <!-- Top Center Card -->
+          <div
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-end bg-gray-50 min-h-[200px]"
+          >
+            <button
+              class="self-end px-4 py-1.5 bg-gray-800 text-white rounded-lg text-xs font-semibold"
+            >
+              Shop Now
+            </button>
+          </div>
+
+          <!-- Top Right Card -->
+          <div
+            class="border border-gray-300 rounded-2xl p-5 bg-gray-300 min-h-[200px] flex flex-col justify-between"
+          >
+            <div class="w-10 h-10 bg-gray-100 rounded"></div>
+            <div class="space-y-2">
+              <div class="w-3/4 h-3 bg-gray-100 rounded"></div>
+              <div class="w-full h-3 bg-gray-100 rounded"></div>
+              <div class="w-2/3 h-3 bg-gray-100 rounded"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Center Card -->
+          <div
+            class="border border-gray-300 rounded-2xl p-5 bg-gray-300 min-h-[200px] flex flex-col justify-between"
+          >
+            <div class="w-10 h-10 bg-gray-100 rounded"></div>
+            <div class="space-y-2">
+              <div class="w-3/4 h-3 bg-gray-100 rounded"></div>
+              <div class="w-full h-3 bg-gray-100 rounded"></div>
+              <div class="w-2/3 h-3 bg-gray-100 rounded"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Right Card -->
+          <div
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-end bg-gray-50 min-h-[200px]"
+          >
+            <button
+              class="self-end px-4 py-1.5 bg-gray-800 text-white rounded-lg text-xs font-semibold"
+            >
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER (GRID) ==================== -->
+    <footer class="bg-gray-500 text-white mt-20 pt-12 pb-8">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-gray-400"
+      >
+        <!-- Contact Info -->
+        <div class="grid grid-cols-1 gap-4">
+          <h2 class="text-2xl font-bold tracking-wider">LOGO</h2>
+          <div class="text-xs grid grid-cols-1 gap-1 text-gray-100">
+            <p class="font-semibold">Call 099-999-9999</p>
+            <p class="text-gray-200">MON - FRY : 09:00 AM - 17:00 PM</p>
+          </div>
+          <p class="text-xs text-gray-100">Email: name@gmail.com</p>
+        </div>
+
+        <!-- Links: Products -->
+        <div>
+          <h3 class="font-semibold text-sm mb-3">Products</h3>
+          <ul class="grid grid-cols-1 gap-2 text-xs text-gray-200">
+            <li><a href="#" class="hover:underline">New Arrivals</a></li>
+            <li><a href="#" class="hover:underline">Best Seller</a></li>
+            <li><a href="#" class="hover:underline">Collections</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: About Us -->
+        <div>
+          <h3 class="font-semibold text-sm mb-3">About Us</h3>
+          <ul class="grid grid-cols-1 gap-2 text-xs text-gray-200">
+            <li><a href="#" class="hover:underline">Story</a></li>
+            <li><a href="#" class="hover:underline">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Payment Methods -->
+        <div>
+          <h3 class="font-semibold text-sm mb-3">We Accepted</h3>
+          <div class="grid grid-flow-col auto-cols-max items-center gap-2">
+            <span
+              class="px-2 py-1 bg-white text-blue-900 text-[10px] font-bold rounded"
+              >VISA</span
+            >
+            <span
+              class="px-2 py-1 bg-white text-orange-600 text-[10px] font-bold rounded"
+              >DISCOVER</span
+            >
+            <span
+              class="px-2 py-1 bg-white text-red-600 text-[10px] font-bold rounded"
+              >MasterCard</span
+            >
+            <span
+              class="px-2 py-1 bg-white text-green-600 text-[10px] font-bold rounded"
+              >JCB</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="max-w-7xl mx-auto px-6 text-center text-xs text-gray-200 mt-6"
+      >
+        &copy; 2026 Zeta
+      </div>
+    </footer>
+  </body>
+</html>
