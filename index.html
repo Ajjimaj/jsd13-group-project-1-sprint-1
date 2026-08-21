@@ -37,7 +37,7 @@
         class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70 z-0"
       ></div>
 
-      <!-- NAVBAR (Perfectly Balanced Scale & Alignment) -->
+      <!-- NAVBAR -->
       <nav
         class="relative z-10 max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-4 min-h-[44px]"
       >
@@ -50,25 +50,22 @@
 
         <!-- 2. Center: Menu Links (Balanced Capsule) -->
         <div
-          class="flex items-center bg-white/20 backdrop-blur-md border border-white/30 rounded-full p-1 text-xs md:text-sm font-medium text-white shadow-sm"
+          class="flex items-center bg-[#D3D648]/30 backdrop-blur-md border border-white/10 rounded-full p-1 text-xs md:text-sm font-medium text-white shadow-sm"
         >
-          <!-- Active Tab -->
           <a
-            href="#"
-            class="px-3.5 py-1.5 bg-white/40 text-white rounded-full transition font-semibold"
+            href="#" class="px-3.5 py-1.5 rounded-full transition hover:bg-[#D3D648]/60 hover:text-[#1E0E8A]"
             >New Arrivals</a
           >
-          <!-- Inactive Tabs -->
-          <a href="#" class="px-3.5 py-1.5 hover:text-white/80 transition"
+          <a href="#" class="px-3.5 py-1.5 rounded-full transition hover:bg-[#D3D648]/60 hover:text-[#1E0E8A]"
             >Best Seller</a
           >
-          <a href="#" class="px-3.5 py-1.5 hover:text-white/80 transition"
+          <a href="#" class="px-3.5 py-1.5 rounded-full transition hover:bg-[#D3D648]/60 hover:text-[#1E0E8A]"
             >League</a
           >
-          <a href="#" class="px-3.5 py-1.5 hover:text-white/80 transition"
+          <a href="#" class="px-3.5 py-1.5 rounded-full transition hover:bg-[#D3D648]/60 hover:text-[#1E0E8A]"
             >Collections</a
           >
-          <a href="#" class="px-3.5 py-1.5 hover:text-white/80 transition"
+          <a href="#" class="px-3.5 py-1.5 rounded-full transition hover:bg-[#D3D648]/60 hover:text-[#1E0E8A]"
             >On Sale</a
           >
         </div>
@@ -93,7 +90,7 @@
             <input
               type="text"
               placeholder="Search"
-              class="pl-9 pr-4 py-2 w-44 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white/50 h-9"
+              class="pl-9 pr-4 py-2 w-44 rounded-full bg-[#D3D648]/30 backdrop-blur-md border border-white/30 text-xs text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white/50 h-9"
             />
           </div>
 
@@ -192,7 +189,7 @@
       </section>
 
       <!-- ==================== SECTION 3: NEW ARRIVALS ==================== -->
-       <main class="max-w-7xl mx-auto px-6 space-y-16 py-12">
+      <main class="max-w-7xl mx-auto px-6 space-y-16 py-12">
       <section>
         <h2 class="text-2xl font-bold tracking-tight mb-6">New Arrivals</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -201,10 +198,15 @@
             class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition"
           >
             <div
-              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start overflow-hidden"
             >
-              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
-              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+              <img
+                src=""
+                alt="Product Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10 w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="relative z-10 w-7 h-7 bg-gray-300 rounded-full"></span>
             </div>
             <div class="mt-4 space-y-2">
               <div class="w-12 h-3 bg-gray-200 rounded"></div>
@@ -222,10 +224,15 @@
             class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition"
           >
             <div
-              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start overflow-hidden"
             >
-              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
-              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+              <img
+                src=""
+                alt="Product Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10 w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="relative z-10 w-7 h-7 bg-gray-300 rounded-full"></span>
             </div>
             <div class="mt-4 space-y-2">
               <div class="w-12 h-3 bg-gray-200 rounded"></div>
@@ -243,10 +250,15 @@
             class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition"
           >
             <div
-              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start overflow-hidden"
             >
-              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
-              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+              <img
+                src=""
+                alt="Product Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10 w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="relative z-10 w-7 h-7 bg-gray-300 rounded-full"></span>
             </div>
             <div class="mt-4 space-y-2">
               <div class="w-12 h-3 bg-gray-200 rounded"></div>
@@ -264,10 +276,15 @@
             class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition"
           >
             <div
-              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start overflow-hidden"
             >
-              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
-              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+              <img
+                src=""
+                alt="Product Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10 w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="relative z-10 w-7 h-7 bg-gray-300 rounded-full"></span>
             </div>
             <div class="mt-4 space-y-2">
               <div class="w-12 h-3 bg-gray-200 rounded"></div>
@@ -291,10 +308,15 @@
             class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm"
           >
             <div
-              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start overflow-hidden"
             >
-              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
-              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+              <img
+                src=""
+                alt="Best Seller Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10 w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="relative z-10 w-7 h-7 bg-gray-300 rounded-full"></span>
             </div>
             <div class="mt-4 space-y-2">
               <div class="w-12 h-3 bg-gray-200 rounded"></div>
@@ -312,10 +334,15 @@
             class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm"
           >
             <div
-              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start overflow-hidden"
             >
-              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
-              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+              <img
+                src=""
+                alt="Best Seller Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10 w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="relative z-10 w-7 h-7 bg-gray-300 rounded-full"></span>
             </div>
             <div class="mt-4 space-y-2">
               <div class="w-12 h-3 bg-gray-200 rounded"></div>
@@ -333,10 +360,15 @@
             class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm"
           >
             <div
-              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start overflow-hidden"
             >
-              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
-              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+              <img
+                src=""
+                alt="Best Seller Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10 w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="relative z-10 w-7 h-7 bg-gray-300 rounded-full"></span>
             </div>
             <div class="mt-4 space-y-2">
               <div class="w-12 h-3 bg-gray-200 rounded"></div>
@@ -354,10 +386,15 @@
             class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-between bg-white shadow-sm"
           >
             <div
-              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start"
+              class="h-48 bg-gray-100 rounded-xl p-3 relative flex justify-between items-start overflow-hidden"
             >
-              <span class="w-16 h-6 bg-gray-300 rounded-md"></span>
-              <span class="w-7 h-7 bg-gray-300 rounded-full"></span>
+              <img
+                src=""
+                alt="Best Seller Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10 w-16 h-6 bg-gray-300 rounded-md"></span>
+              <span class="relative z-10 w-7 h-7 bg-gray-300 rounded-full"></span>
             </div>
             <div class="mt-4 space-y-2">
               <div class="w-12 h-3 bg-gray-200 rounded"></div>
@@ -387,24 +424,44 @@
           <!-- League Items Grid -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full px-2">
             <div
-              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500"
+              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500 overflow-hidden relative"
             >
-              League 1
+              <img
+                src=""
+                alt="League 1 Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10">League 1</span>
             </div>
             <div
-              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500"
+              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500 overflow-hidden relative"
             >
-              League 2
+              <img
+                src=""
+                alt="League 2 Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10">League 2</span>
             </div>
             <div
-              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500"
+              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500 overflow-hidden relative"
             >
-              League 3
+              <img
+                src=""
+                alt="League 3 Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10">League 3</span>
             </div>
             <div
-              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500"
+              class="h-64 border border-gray-300 bg-gray-50 rounded-2xl flex items-center justify-center font-medium text-gray-500 overflow-hidden relative"
             >
-              League 4
+              <img
+                src=""
+                alt="League 4 Image"
+                class="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              <span class="relative z-10">League 4</span>
             </div>
           </div>
 
@@ -423,16 +480,21 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <!-- Left Big Card -->
           <div
-            class="md:row-span-2 border border-gray-300 rounded-2xl p-6 flex flex-col justify-between bg-gray-50 min-h-[420px]"
+            class="md:row-span-2 border border-gray-300 rounded-2xl p-6 flex flex-col justify-between bg-gray-50 min-h-[420px] relative overflow-hidden"
           >
-            <div>
+            <img
+              src=""
+              alt="Collection Image"
+              class="absolute inset-0 w-full h-full object-cover z-0"
+            />
+            <div class="relative z-10">
               <div class="w-16 h-16 bg-gray-300 rounded-lg mb-6"></div>
               <div class="w-3/4 h-5 bg-gray-300 rounded mb-2"></div>
               <div class="w-1/2 h-5 bg-gray-300 rounded mb-2"></div>
               <div class="w-1/3 h-5 bg-gray-300 rounded"></div>
             </div>
             <button
-              class="self-end px-6 py-2 bg-gray-800 text-white rounded-lg text-xs font-semibold"
+              class="relative z-10 self-end px-6 py-2 bg-gray-800 text-white rounded-lg text-xs font-semibold"
             >
               Explore
             </button>
@@ -440,10 +502,15 @@
 
           <!-- Top Center Card -->
           <div
-            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-end bg-gray-50 min-h-[200px]"
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-end bg-gray-50 min-h-[200px] relative overflow-hidden"
           >
+            <img
+              src=""
+              alt="Collection Image"
+              class="absolute inset-0 w-full h-full object-cover z-0"
+            />
             <button
-              class="self-end px-4 py-1.5 bg-gray-800 text-white rounded-lg text-xs font-semibold"
+              class="relative z-10 self-end px-4 py-1.5 bg-gray-800 text-white rounded-lg text-xs font-semibold"
             >
               Shop Now
             </button>
@@ -451,10 +518,15 @@
 
           <!-- Top Right Card -->
           <div
-            class="border border-gray-300 rounded-2xl p-5 bg-gray-300 min-h-[200px] flex flex-col justify-between"
+            class="border border-gray-300 rounded-2xl p-5 bg-gray-300 min-h-[200px] flex flex-col justify-between relative overflow-hidden"
           >
-            <div class="w-10 h-10 bg-gray-100 rounded"></div>
-            <div class="space-y-2">
+            <img
+              src=""
+              alt="Collection Image"
+              class="absolute inset-0 w-full h-full object-cover z-0"
+            />
+            <div class="relative z-10 w-10 h-10 bg-gray-100 rounded"></div>
+            <div class="relative z-10 space-y-2">
               <div class="w-3/4 h-3 bg-gray-100 rounded"></div>
               <div class="w-full h-3 bg-gray-100 rounded"></div>
               <div class="w-2/3 h-3 bg-gray-100 rounded"></div>
@@ -463,10 +535,15 @@
 
           <!-- Bottom Center Card -->
           <div
-            class="border border-gray-300 rounded-2xl p-5 bg-gray-300 min-h-[200px] flex flex-col justify-between"
+            class="border border-gray-300 rounded-2xl p-5 bg-gray-300 min-h-[200px] flex flex-col justify-between relative overflow-hidden"
           >
-            <div class="w-10 h-10 bg-gray-100 rounded"></div>
-            <div class="space-y-2">
+            <img
+              src=""
+              alt="Collection Image"
+              class="absolute inset-0 w-full h-full object-cover z-0"
+            />
+            <div class="relative z-10 w-10 h-10 bg-gray-100 rounded"></div>
+            <div class="relative z-10 space-y-2">
               <div class="w-3/4 h-3 bg-gray-100 rounded"></div>
               <div class="w-full h-3 bg-gray-100 rounded"></div>
               <div class="w-2/3 h-3 bg-gray-100 rounded"></div>
@@ -475,10 +552,15 @@
 
           <!-- Bottom Right Card -->
           <div
-            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-end bg-gray-50 min-h-[200px]"
+            class="border border-gray-300 rounded-2xl p-4 flex flex-col justify-end bg-gray-50 min-h-[200px] relative overflow-hidden"
           >
+            <img
+              src=""
+              alt="Collection Image"
+              class="absolute inset-0 w-full h-full object-cover z-0"
+            />
             <button
-              class="self-end px-4 py-1.5 bg-gray-800 text-white rounded-lg text-xs font-semibold"
+              class="relative z-10 self-end px-4 py-1.5 bg-gray-800 text-white rounded-lg text-xs font-semibold"
             >
               Shop Now
             </button>
@@ -487,25 +569,25 @@
       </section>
     </main>
 
-    <!-- ==================== FOOTER (GRID) ==================== -->
-    <footer class="bg-gray-500 text-white mt-20 pt-12 pb-8">
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-[#D3D648] text-black mt-20 pt-12 pb-8">
       <div
-        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-gray-400"
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-gray-700"
       >
         <!-- Contact Info -->
         <div class="grid grid-cols-1 gap-4">
           <h2 class="text-2xl font-bold tracking-wider">LOGO</h2>
-          <div class="text-xs grid grid-cols-1 gap-1 text-gray-100">
+          <div class="text-xs grid grid-cols-1 gap-1 text-black-100">
             <p class="font-semibold">Call 099-999-9999</p>
-            <p class="text-gray-200">MON - FRY : 09:00 AM - 17:00 PM</p>
+            <p class="text-black-200">MON - FRY : 09:00 AM - 17:00 PM</p>
           </div>
-          <p class="text-xs text-gray-100">Email: name@gmail.com</p>
+          <p class="text-xs text-black-100">Email: name@gmail.com</p>
         </div>
 
         <!-- Links: Products -->
         <div>
           <h3 class="font-semibold text-sm mb-3">Products</h3>
-          <ul class="grid grid-cols-1 gap-2 text-xs text-gray-200">
+          <ul class="grid grid-cols-1 gap-2 text-xs text-black-200">
             <li><a href="#" class="hover:underline">New Arrivals</a></li>
             <li><a href="#" class="hover:underline">Best Seller</a></li>
             <li><a href="#" class="hover:underline">Collections</a></li>
@@ -515,7 +597,7 @@
         <!-- Links: About Us -->
         <div>
           <h3 class="font-semibold text-sm mb-3">About Us</h3>
-          <ul class="grid grid-cols-1 gap-2 text-xs text-gray-200">
+          <ul class="grid grid-cols-1 gap-2 text-xs text-black-200">
             <li><a href="#" class="hover:underline">Story</a></li>
             <li><a href="#" class="hover:underline">Careers</a></li>
           </ul>
@@ -547,7 +629,7 @@
 
       <!-- Copyright -->
       <div
-        class="max-w-7xl mx-auto px-6 text-center text-xs text-gray-200 mt-6"
+        class="max-w-7xl mx-auto px-6 text-center text-xs text-black-200 mt-6"
       >
         &copy; 2026 Zeta
       </div>
