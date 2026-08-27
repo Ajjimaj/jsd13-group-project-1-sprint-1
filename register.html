@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe Sign Up Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #d5d5d5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* Main White Card Container */
+    .container {
+      background: #ffffff;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 960px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 24px;
+      gap: 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    
+    .hero-card {
+      border: 1px solid #404040;
+      border-radius: 12px;
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .logo-badge {
+      background-color: #737373;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 4px;
+    }
+
+    .back-btn {
+      background-color: #ffffff;
+      color: #333333;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-bottom {
+      margin-top: auto;
+    }
+
+    .hero-indicators {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    /* Right Form Section */
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 12px 8px;
+    }
+
+    .form-header {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 24px;
+    }
+
+    .form-header a {
+      color: #111111;
+      text-decoration: underline;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .input-field {
+      width: 100%;
+      height: 48px;
+      background-color: #dcdcdc;
+      border: none;
+      border-radius: 8px;
+      padding: 0 16px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 20px 0;
+      font-size: 13px;
+      font-weight: 700;
+      color: #111111;
+    }
+
+    .custom-checkbox {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #111111;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .custom-checkbox svg {
+      width: 15px;
+      height: 15px;
+      stroke: #111111;
+      stroke-width: 3;
+    }
+
+    .checkbox-row a {
+      color: #111111;
+      text-decoration: underline;
+    }
+
+    .submit-btn {
+      width: 100%;
+      height: 48px;
+      background-color: #e6ddfa;
+      border: 1px solid #111111;
+      border-radius: 2px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #111111;
+      cursor: pointer;
+      margin-bottom: 24px;
+      transition: background-color 0.2s;
+    }
+
+    .submit-btn:hover {
+      background-color: #dacdf5;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #888888;
+    }
+
+    .divider span {
+      padding: 0 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #222222;
+    }
+
+    .social-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .social-btn {
+      width: 100%;
+      height: 48px;
+      background-color: #555555;
+      border: none;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s;
+    }
+
+    .social-btn:hover {
+      background-color: #444444;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .hero-card {
+        min-height: 350px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Side: Hero / Image Wireframe -->
+    <div class="hero-card">
+      <div class="hero-top hero-content">
+        <div class="logo-badge">Logo</div>
+        <a href="#" class="back-btn">Back to website</a>
+      </div>
+      <div class = "football-image">
+        <img src="https://www.anthropics.com/portraitpro/img/page-images/homepage/v22/what-can-it-do-5A.jpg" alt="football" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;">
+      </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Registration Form -->
+    <div class="form-section">
+      <div class="form-header">
+        <h1>Registration</h1>Already have account? <a href="#">Log In</a>
+      </div>
+
+      <form onsubmit="event.preventDefault();">
+        <div class="form-row">
+          <input type="text" class="input-field" placeholder="" aria-label="First Name">
+          <input type="text" class="input-field" placeholder="" aria-label="Last Name">
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="input-field" placeholder="" aria-label="Email Address">
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="input-field" placeholder="" aria-label="Password">
+        </div>
+
+        <div class="checkbox-row">
+          <div class="custom-checkbox">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span>I'm agree to the <a href="#">Term &amp; Condition</a></span>
+        </div>
+
+        <button type="submit" class="submit-btn">Create account</button>
+
+        <div class="divider">
+          <span>Or register with</span>
+        </div>
+
+        <div class="social-buttons">
+          <button type="button" class="social-btn">Google</button>
+          <button type="button" class="social-btn">Apple</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
