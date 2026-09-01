@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZETA x Liverpool FC - 2026/27 Authentic Home Jersey</title>
+
+    <!-- Tailwind CSS Browser CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        @theme {
+            --color-brand-main: #d3d649;
+            --color-brand-navy: #1e0e8a;
+        }
+
+        :root {
+            --color-brand-main: #d3d649;
+            --color-brand-navy: #1e0e8a;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Utility Class Fallbacks */
+        .bg-brand-main {
+            background-color: #d3d649;
+        }
+
+        .text-brand-main {
+            color: #d3d649;
+        }
+
+        .bg-brand-navy {
+            background-color: #1e0e8a;
+        }
+
+        .text-brand-navy {
+            color: #1e0e8a;
+        }
+
+        .border-brand-navy {
+            border-color: #1e0e8a;
+        }
+
+        /* Smooth Toast Animation */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .toast-animate {
+            animation: slideIn 0.3s ease-out forwards;
+        }
+    </style>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased relative min-h-screen">
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- Main Showcase Container -->
+    <main class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- LEFT COLUMN: Product Gallery -->
+        <div class="flex gap-4">
+            <!-- 1. Thumbnail List (Left side) -->
+            <div class="flex flex-col space-y-3 w-20">
+                <button type="button"
+                    class="thumbnail-btn aspect-square rounded-xl overflow-hidden border-2 border-brand-navy cursor-pointer transition"
+                    data-src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7e083827b22844499db6244f9b547763_9366/Liverpool_FC_26-27_Home_Jersey_Burgundy_KA6852_21_model.jpg">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7e083827b22844499db6244f9b547763_9366/Liverpool_FC_26-27_Home_Jersey_Burgundy_KA6852_21_model.jpg"
+                        alt="Liverpool FC Home Jersey Front" class="w-full h-full object-cover pointer-events-none" />
+                </button>
+                <button type="button"
+                    class="thumbnail-btn aspect-square rounded-xl overflow-hidden border border-gray-200 opacity-70 hover:opacity-100 cursor-pointer transition"
+                    data-src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a2d25d8d058749669522b30326cbe800_9366/Liverpool_FC_26-27_Home_Jersey_Burgundy_KA6852_23_hover_model.jpg">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a2d25d8d058749669522b30326cbe800_9366/Liverpool_FC_26-27_Home_Jersey_Burgundy_KA6852_23_hover_model.jpg"
+                        alt="Liverpool FC Home Jersey Angle" class="w-full h-full object-cover pointer-events-none" />
+                </button>
+                <button type="button"
+                    class="thumbnail-btn aspect-square rounded-xl overflow-hidden border border-gray-200 opacity-70 hover:opacity-100 cursor-pointer transition"
+                    data-src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6b201f24458646f7a029eb0022363cf9_9366/Liverpool_FC_26-27_Home_Jersey_Burgundy_KA6852_25_model.jpg">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6b201f24458646f7a029eb0022363cf9_9366/Liverpool_FC_26-27_Home_Jersey_Burgundy_KA6852_25_model.jpg"
+                        alt="Liverpool FC Home Jersey Back" class="w-full h-full object-cover pointer-events-none" />
+                </button>
+            </div>
+
+            <!-- 2. Hero Image Display (Right side) -->
+            <div class="flex-1 relative aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden">
+                <img id="hero-image"
+                    src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/7e083827b22844499db6244f9b547763_9366/Liverpool_FC_26-27_Home_Jersey_Burgundy_KA6852_21_model.jpg"
+                    alt="Liverpool FC 26-27 Home Jersey"
+                    class="w-full h-full object-cover transition-all duration-300" />
+
+                <!-- Zoom Button Icon (Bottom Right) -->
+                <button type="button" id="zoom-btn"
+                    class="absolute bottom-4 right-4 bg-white p-2.5 rounded-full shadow-md hover:scale-105 transition cursor-pointer flex items-center justify-center">
+                    <i data-lucide="search" class="w-5 h-5 text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Product Info & Actions -->
+        <section id="product-info" class="flex flex-col space-y-5">
+
+            <!-- 1. Kit Edition Badge -->
+            <div>
+                <span
+                    class="inline-block bg-brand-main text-brand-navy text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                    2026/27 OFFICIAL LIVERPOOL FC MATCH KIT
+                </span>
+            </div>
+
+            <!-- 2. Product Title -->
+            <h1 class="text-3xl lg:text-4xl font-extrabold text-brand-navy tracking-tight">
+                Liverpool FC 2026/27 Home Jersey
+            </h1>
+
+            <!-- 3. Rating & Reviews -->
+            <div class="flex items-center space-x-2">
+                <div class="flex text-yellow-400 text-sm">
+                    ★★★★★
+                </div>
+                <span class="text-sm font-medium text-gray-600">4.9</span>
+                <span class="text-sm text-gray-400">(482 reviews)</span>
+            </div>
+
+            <!-- 4. Price & Discount Row -->
+            <div class="flex items-center space-x-3 pt-2 pb-5 border-b border-gray-100">
+                <span id="product-price" class="text-2xl font-extrabold text-brand-navy">$119.99</span>
+                <span id="product-original-price"
+                    class="line-through text-gray-400 text-base font-normal">$149.99</span>
+                <span id="product-discount" class="bg-brand-navy text-white text-xs px-2.5 py-1 rounded font-bold">20%
+                    OFF</span>
+            </div>
+
+            <!-- 5. Kit Edition / Grade Selector -->
+            <div>
+                <label class="text-sm font-semibold text-gray-900 block mb-2">Select Edition</label>
+                <div class="grid grid-cols-2 gap-3">
+                    <!-- Option A: Player Edition -->
+                    <button type="button"
+                        class="edition-btn border-2 border-brand-navy bg-slate-50 p-3 rounded-xl text-left cursor-pointer transition"
+                        data-edition="Player" data-price="119.99" data-original="149.99" data-discount="20%">
+                        <span class="block text-sm font-bold text-brand-navy">Player Edition</span>
+                        <span class="text-xs text-gray-500">Slim fit • Authentic LFC Crest</span>
+                    </button>
+
+                    <!-- Option B: Stadium Edition -->
+                    <button type="button"
+                        class="edition-btn border border-gray-200 hover:border-gray-400 p-3 rounded-xl text-left cursor-pointer transition"
+                        data-edition="Stadium" data-price="89.99" data-original="109.99" data-discount="18%">
+                        <span class="block text-sm font-bold text-gray-900">Stadium Edition</span>
+                        <span class="text-xs text-gray-500">Regular fit • Fan Replica</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6. Size Selector -->
+            <div>
+                <div class="flex justify-between items-center text-sm mb-2">
+                    <span class="font-semibold text-gray-900">Select Size: <span id="selected-size-label"
+                            class="font-bold text-brand-navy">M</span></span>
+                    <a href="#"
+                        class="text-xs font-semibold text-gray-600 underline hover:text-black flex items-center gap-1">
+                        <i data-lucide="ruler" class="w-3.5 h-3.5"></i> Size Guide
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-5 gap-2.5">
+                    <button type="button"
+                        class="size-btn border border-gray-200 py-3 rounded-xl font-semibold text-sm hover:border-brand-navy cursor-pointer transition"
+                        data-size="S">S</button>
+                    <button type="button"
+                        class="size-btn bg-brand-navy text-white py-3 rounded-xl font-semibold text-sm cursor-pointer transition"
+                        data-size="M">M</button>
+                    <button type="button"
+                        class="size-btn border border-gray-200 py-3 rounded-xl font-semibold text-sm hover:border-brand-navy cursor-pointer transition"
+                        data-size="L">L</button>
+                    <button type="button"
+                        class="size-btn border border-gray-200 py-3 rounded-xl font-semibold text-sm hover:border-brand-navy cursor-pointer transition"
+                        data-size="XL">XL</button>
+                    <button type="button"
+                        class="size-btn border border-gray-200 py-3 rounded-xl font-semibold text-sm hover:border-brand-navy cursor-pointer transition"
+                        data-size="2XL">2XL</button>
+                </div>
+            </div>
+
+            <!-- 7. Custom Jersey Personalization (Name & Number Printing) -->
+            <div class="bg-slate-50 border border-gray-200 p-4 rounded-2xl space-y-3">
+                <div class="flex justify-between items-center">
+                    <span class="text-sm font-bold text-gray-900">Custom LFC Printing</span>
+                    <span class="text-xs font-bold text-brand-navy bg-brand-main px-2 py-0.5 rounded">+ $15.00</span>
+                </div>
+                <div class="grid grid-cols-3 gap-3">
+                    <input type="text" id="custom-name-input" placeholder="NAME (e.g. SALAH)"
+                        class="col-span-2 bg-white border border-gray-300 rounded-xl px-3 py-2 text-sm uppercase font-semibold tracking-wider focus:outline-none focus:border-brand-navy" />
+                    <input type="number" id="custom-number-input" placeholder="NUMBER (e.g. 11)"
+                        class="col-span-1 bg-white border border-gray-300 rounded-xl px-3 py-2 text-sm font-semibold text-center focus:outline-none focus:border-brand-navy" />
+                </div>
+            </div>
+
+            <!-- 8. Add to Cart & Wishlist Actions -->
+            <div class="flex items-center gap-3 pt-2">
+                <button type="button" id="add-to-cart-btn"
+                    class="flex-1 bg-brand-navy text-white py-4 rounded-xl font-bold text-sm hover:bg-opacity-95 transition flex items-center justify-center space-x-2 shadow-md cursor-pointer active:scale-98">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <span>Add to Cart</span>
+                </button>
+                <button type="button" id="wishlist-btn"
+                    class="border border-gray-300 p-4 rounded-xl hover:border-brand-navy text-gray-700 transition flex items-center justify-center cursor-pointer">
+                    <i data-lucide="heart" id="wishlist-icon" class="w-5 h-5 transition-transform duration-200"></i>
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Initialize Lucide Icons & Interactive Logic -->
+    <script>
+        lucide.createIcons();
+
+        // 1. Thumbnail Selector Logic
+        const thumbnails = document.querySelectorAll('.thumbnail-btn');
+        const heroImage = document.getElementById('hero-image');
+
+        thumbnails.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active border
+                thumbnails.forEach(t => {
+                    t.classList.remove('border-2', 'border-brand-navy');
+                    t.classList.add('border', 'border-gray-200', 'opacity-70');
+                });
+                btn.classList.remove('border-gray-200', 'opacity-70');
+                btn.classList.add('border-2', 'border-brand-navy');
+
+                // Swap hero image
+                const newSrc = btn.getAttribute('data-src');
+                heroImage.src = newSrc;
+            });
+        });
+
+        // 2. Kit Edition Selector Logic
+        const editionBtns = document.querySelectorAll('.edition-btn');
+        const priceEl = document.getElementById('product-price');
+        const originalPriceEl = document.getElementById('product-original-price');
+        const discountEl = document.getElementById('product-discount');
+        let selectedEdition = 'Player';
+
+        editionBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                editionBtns.forEach(b => {
+                    b.classList.remove('border-2', 'border-brand-navy', 'bg-slate-50');
+                    b.classList.add('border', 'border-gray-200');
+                    const title = b.querySelector('span:first-child');
+                    title.classList.remove('text-brand-navy');
+                    title.classList.add('text-gray-900');
+                });
+
+                btn.classList.remove('border-gray-200');
+                btn.classList.add('border-2', 'border-brand-navy', 'bg-slate-50');
+                const activeTitle = btn.querySelector('span:first-child');
+                activeTitle.classList.remove('text-gray-900');
+                activeTitle.classList.add('text-brand-navy');
+
+                // Update prices
+                selectedEdition = btn.getAttribute('data-edition');
+                priceEl.textContent = `$${btn.getAttribute('data-price')}`;
+                originalPriceEl.textContent = `$${btn.getAttribute('data-original')}`;
+                discountEl.textContent = btn.getAttribute('data-discount');
+            });
+        });
+
+        // 3. Size Selector Logic
+        const sizeBtns = document.querySelectorAll('.size-btn');
+        const selectedSizeLabel = document.getElementById('selected-size-label');
+        let selectedSize = 'M';
+
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeBtns.forEach(s => {
+                    s.className = 'size-btn border border-gray-200 py-3 rounded-xl font-semibold text-sm hover:border-brand-navy cursor-pointer transition';
+                });
+                btn.className = 'size-btn bg-brand-navy text-white py-3 rounded-xl font-semibold text-sm cursor-pointer transition';
+                selectedSize = btn.getAttribute('data-size');
+                selectedSizeLabel.textContent = selectedSize;
+            });
+        });
+
+        // 4. Wishlist Heart Toggle Logic
+        const wishlistBtn = document.getElementById('wishlist-btn');
+        let isLiked = false;
+
+        wishlistBtn.addEventListener('click', () => {
+            isLiked = !isLiked;
+            if (isLiked) {
+                wishlistBtn.className = 'border border-red-500 bg-red-50 p-4 rounded-xl text-red-500 transition flex items-center justify-center cursor-pointer';
+                showToast('Added ZETA x Liverpool FC Kit to your Wishlist! ❤️');
+            } else {
+                wishlistBtn.className = 'border border-gray-300 p-4 rounded-xl hover:border-brand-navy text-gray-700 transition flex items-center justify-center cursor-pointer';
+            }
+        });
+
+        // 5. Add to Cart Toast Notification Logic
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
+        const customNameInput = document.getElementById('custom-name-input');
+        const customNumberInput = document.getElementById('custom-number-input');
+
+        addToCartBtn.addEventListener('click', () => {
+            let message = `Added Liverpool FC (${selectedEdition} Kit - Size ${selectedSize}) to Cart! 🛒`;
+            const customName = customNameInput.value.trim().toUpperCase();
+            const customNumber = customNumberInput.value.trim();
+
+            if (customName || customNumber) {
+                message += ` [Custom: ${customName || 'LFC'} #${customNumber || '10'}]`;
+            }
+
+            showToast(message);
+        });
+
+        // Toast Helper Function
+        function showToast(msg) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast-animate bg-brand-navy text-white px-5 py-3.5 rounded-2xl shadow-xl border border-brand-main flex items-center gap-3 text-xs md:text-sm font-semibold pointer-events-auto';
+            toast.innerHTML = `<span>⚡</span><span>${msg}</span>`;
+
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(-10px)';
+                toast.style.transition = 'all 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+    </script>
+</body>
+
+</html>
