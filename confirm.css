@@ -1,0 +1,560 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: white color: #333;
+}
+
+/* ---------------- Navigation Bar ---------------- */
+.navbar {
+    background-color: #d9d140;
+    padding: 16px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-logo {
+    background-color: #16128c;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    padding: 6px 16px;
+    border-radius: 17px;
+    transition: all 0.2s ease;
+}
+
+.nav-link.active {
+    background-color: black;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    padding: 6px 12px 6px 30px;
+    display: flex;
+    align-items: center;
+    width: 160px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 10px;
+    color: #666;
+    font-size: 12px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 12px;
+    width: 100%;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.icon-btn {
+    color: #333333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+    transform: scale(1.15);
+}
+
+/* ---------------- Layout & Main Content ---------------- */
+.cart-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+.cart-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left Section: Cart Items */
+.cart-items-box {
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 16px 24px;
+    margin-bottom: 40px;
+    /*ปรับระยะตามต้องการ*/
+}
+
+.cart-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-img {
+    width: 90px;
+    height: 90px;
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ทำให้รูปตัดพอดีกับขนาดกล่องโดยไม่เบี้ยว */
+    border-radius: inherit;
+    /* ให้มุมมนตามกล่องแม่ (ถ้ามี) */
+}
+
+.item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* ปุ่มถังขยะ */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    /* สีแดง */
+    cursor: pointer;
+    /* เปลี่ยนเมาส์เป็นรูปมือ */
+    font-size: 16px;
+    padding: 4px;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.delete-btn:hover {
+    color: #cc0000;
+    /* สีแดงเข้มขึ้นเมื่อ Hover */
+    transform: scale(1.2);
+    /* ขยายใหญ่ขึ้นเล็กน้อย */
+}
+
+.item-spec {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.item-spec span {
+    color: #222;
+}
+
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.item-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* กล่องควบคุมจำนวนสินค้า */
+.qty-control {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 4px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+    /* ป้องกันการคลุมดำตัวเลขเวลาคลิกรัวๆ */
+}
+
+.qty-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.qty-btn:hover {
+    color: #000000;
+    transform: scale(1.25);
+}
+
+.qty-val {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 16px;
+    text-align: center;
+    color: #111111;
+}
+
+/* Right Section: Order Summary */
+.summary-box {
+    width: 380px;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 24px;
+    height: fit-content;
+}
+
+.summary-box h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.price-val {
+    font-weight: bold;
+    color: #000;
+}
+
+.price-val.discount {
+    color: #ff4d4d;
+}
+
+.summary-divider {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 16px 0;
+}
+
+.total-row {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+
+.price-val.total {
+    font-size: 18px;
+}
+
+/* --- ส่วน Promo Box --- */
+/* กล่องรวมช่องกรอก + ปุ่ม Apply (วางขนานกันในแนวนอน) */
+.promo-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 16px 0;
+}
+
+/* ช่องกรอก Promo Code (ขยายเต็มพื้นที่ฝั่งซ้าย) */
+.promo-input {
+    flex: 1;
+    /* ดึงพื้นที่ส่วนใหญ่ด้านซ้ายไปใช้ */
+    background-color: #e5e5e5;
+    border-radius: 62px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-input i {
+    color: #888888;
+    font-size: 14px;
+}
+
+.promo-input input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* ปุ่ม Apply (ล็อคขนาดไว้ขวา) */
+.apply-btn {
+    background-color: #16128c;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 62px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    /* ป้องกันปุ่มตัดคำบรรทัดใหม่ */
+    transition: background-color 0.2s ease;
+}
+
+.apply-btn:hover {
+    background-color: #934530;
+}
+
+.apply-btn:active {
+    transform: scale(0.96);
+    /* ยุบลงเล็กน้อยตอนกด */
+}
+
+/* ปุ่ม Go to Checkout */
+.checkout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background-color: #16128c;
+    ;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 62px;
+    font-size: 15px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #16128c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-btn:active {
+    transform: scale(0.98);
+}
+
+/* เอฟเฟกต์ลูกศรขยับเวลา Hover */
+.checkout-btn i {
+    transition: transform 0.2s ease;
+}
+
+.checkout-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* ---------------- Banner Section ---------------- */
+.newsletter-banner {
+    background-color: #222222;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 36px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.newsletter-banner h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 500px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.newsletter-form input {
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.newsletter-form button {
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffffff;
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ปุ่ม Subscribe */
+.subscribe-btn {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 62px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    /* เปลี่ยนเมาส์เป็นรูปมือ */
+    transition: all 0.2s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+}
+
+.subscribe-btn:active {
+    transform: scale(0.98);
+    /* ยุบลงเล็กน้อยตอนกด */
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+    background-color: #d9d140;
+    color: #ffffff;
+    padding: 40px 60px 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.footer-links h4,
+.footer-payment h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.payment-badges {
+    display: flex;
+    gap: 6px;
+}
+
+.badge {
+    background: white;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.badge.visa {
+    color: #003399;
+}
+
+.badge.discover {
+    color: #ff6600;
+}
+
+.badge.mc {
+    color: #cc0000;
+}
+
+.badge.amex {
+    color: #006699;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 11px;
+    border-top: 1px solid #a0a0a0;
+    padding-top: 16px;
+    color: #e0e0e0;
+}
