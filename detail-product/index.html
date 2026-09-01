@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail Page</title>
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">Logo</div>
+        <div class="nav-menu">
+            <a href="#" class="active">New Arrivals</a>
+            <a href="#">Best Seller</a>
+            <a href="#">League</a>
+            <a href="#">Collections</a>
+            <a href="#">On Sale</a>
+        </div>
+        <div class="nav-actions">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <a href="#" class="icon-link"><i class="fa-regular fa-heart"></i></a>
+            <a href="#" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#" class="icon-link"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Top Section -->
+        <section class="product-top">
+            <!-- 1. Thumbnail Gallery -->
+            <div class="thumbs">
+                <div class="thumb active">
+                    <div class="img-placeholder">1</div>
+                </div>
+                <div class="thumb">
+                    <div class="img-placeholder">2</div>
+                </div>
+                <div class="thumb">
+                    <div class="img-placeholder">3</div>
+                </div>
+                <div class="thumb">
+                    <div class="img-placeholder">4</div>
+                </div>
+                <button class="thumb-next"><i class="fa-solid fa-arrow-down"></i></button>
+            </div>
+
+            <!-- 2. Main Image -->
+            <div class="main-image">
+                <div class="img-placeholder main-placeholder">1</div>
+                <button class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <span class="badge">Official Kit</span>
+                <h1 class="title">Arsenal 2025/26 Home Jersey</h1>
+
+                <div class="rating">
+                    <div class="stars">★★★★★</div>
+                    <span class="reviews">4.9 (342 reviews)</span>
+                </div>
+
+                <div class="price-container">
+                    <span class="price">$95.00</span>
+                    <span class="old-price">$115.00</span>
+                    <span class="discount-badge">17% OFF</span>
+                </div>
+
+                <p class="description">
+                    Official Premier League 2025/26 season home shirt featuring lightweight, breathable performance
+                    fabric with
+                    moisture-wicking technology and high-definition woven club crest.
+                </p>
+
+                <hr class="divider">
+
+                <div class="selector-group">
+                    <label>Color: <strong id="selected-color">Home Red / White</strong></label>
+                    <div class="color-options">
+                        <span class="color-swatch active" style="background-color: #db0007;"
+                            data-color-name="Home Red / White"></span>
+                        <span class="color-swatch" style="background-color: #063672;"
+                            data-color-name="Away Dark Blue"></span>
+                        <span class="color-swatch" style="background-color: #000000;"
+                            data-color-name="Third Black"></span>
+                    </div>
+                </div>
+
+                <div class="selector-group">
+                    <div class="size-header">
+                        <label>Size: <strong>M</strong></label>
+                        <a href="#" class="size-guide"><i class="fa-solid fa-ruler-horizontal"></i> Size Guide</a>
+                    </div>
+                    <div class="size-options">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn active">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                        <button class="size-btn">XXL</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-cart">
+                        <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+                    </button>
+                    <button class="btn-wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div>
+                            <strong>Free Shipping</strong>
+                            <p>On orders over $99</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-certificate"></i>
+                        <div>
+                            <strong>100% Authentic</strong>
+                            <p>Licensed merchandise</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div>
+                            <strong>Secure Payment</strong>
+                            <p>100% secure checkout</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs Section -->
+        <section class="product-tabs-section">
+            <div class="tab-headers">
+                <button class="tab-btn active">Details</button>
+                <button class="tab-btn">Materials</button>
+                <button class="tab-btn">Size & Fit</button>
+                <button class="tab-btn">Shipping & Returns</button>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-text">
+                    <p>Crafted from high-quality heavyweight cotton, this hoodie delivers unmatched comfort and
+                        durability. The oversized fit and minimal design make it a versatile staple for any wardrobe.
+                    </p>
+                    <ul class="detail-bullets">
+                        <li><i class="fa-solid fa-bag-shopping"></i> Oversized fit</li>
+                        <li><i class="fa-solid fa-shirt"></i> Soft & heavyweight fabric</li>
+                        <li><i class="fa-solid fa-sliders"></i> Adjustable drawstring hood</li>
+                        <li><i class="fa-solid fa-ellipsis"></i> Ribbed cuffs and hem</li>
+                        <li><i class="fa-solid fa-user-group"></i> Unisex style</li>
+                    </ul>
+                </div>
+                <!-- 3. Details Tab Image -->
+                <div class="tab-image">
+                    <div class="img-placeholder tab-placeholder">1</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Recommendation Cards -->
+        <section class="recommendations">
+            <div class="rec-header">
+                <h2>You May Also Like</h2>
+                <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="product-grid">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="card-img">
+                        <div class="img-placeholder card-placeholder">1</div>
+                        <button class="card-wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <h3>Minimal Hoodie</h3>
+                    <p class="card-price">$54.99</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="card-img">
+                        <div class="img-placeholder card-placeholder">2</div>
+                        <button class="card-wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <h3>Classic Sweatshirt</h3>
+                    <p class="card-price">$49.99</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="card-img">
+                        <div class="img-placeholder card-placeholder">3</div>
+                        <button class="card-wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <h3>Zip Up Hoodie</h3>
+                    <p class="card-price">$64.99</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card">
+                    <div class="card-img">
+                        <div class="img-placeholder card-placeholder">4</div>
+                        <button class="card-wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <h3>Essential Hoodie</h3>
+                    <p class="card-price">$59.99</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // ป้องกันหน้าเว็บรีเฟรชเมื่อคลิก
+
+                // ลบ class 'active' ออกจากปุ่มเดิมทั้งหมด
+                navLinks.forEach(item => item.classList.remove('active'));
+
+                // เพิ่ม class 'active' ให้ปุ่มที่เพิ่งกด
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+    <script>
+        // 1. เมนูหลัก (New Arrivals, Best Seller, ฯลฯ)
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                navLinks.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // 2. ไอคอนหัวใจ (Wishlist) - กดเปิด/ปิด หัวใจสีแดง
+        const wishlistBtn = document.querySelector('.nav-actions a .fa-heart').parentElement;
+        wishlistBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-regular');
+            icon.classList.toggle('fa-solid');
+            icon.style.color = icon.classList.contains('fa-solid') ? '#e74c3c' : '#111';
+        });
+
+        // 3. ไอคอนตะกร้า (Cart) - กดเพื่อดูตะกร้าสินค้า
+        const cartBtn = document.querySelector('.nav-actions a .fa-cart-shopping').parentElement;
+        cartBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('เปิดหน้าตะกร้าสินค้า (Cart)');
+        });
+
+        // 4. ไอคอนโปรไฟล์ (User) - กดเพื่อเข้าสู่ระบบ/จัดการบัญชี
+        const userBtn = document.querySelector('.nav-actions a .fa-user').parentElement;
+        userBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('เปิดหน้าเข้าสู่ระบบ / โปรไฟล์ผู้ใช้ (User Profile)');
+        });
+
+        const colorSwatches = document.querySelectorAll('.color-swatch');
+        const selectedColorText = document.getElementById('selected-color');
+
+        colorSwatches.forEach(swatch => {
+            swatch.addEventListener('click', function () {
+                // ลบขอบล้อมรอบ (active) จากสีเดิมทั้งหมด
+                colorSwatches.forEach(item => item.classList.remove('active'));
+
+                // ใส่ขอบล้อมรอบให้สีที่ถูกกด
+                this.classList.add('active');
+
+                // เปลี่ยนชื่อข้อความสีตามที่เลือก
+                const newColorName = this.getAttribute('data-color-name');
+                selectedColorText.textContent = newColorName;
+            });
+        });
+    </script>
+    <script>
+        const colorSwatches = document.querySelectorAll('.color-swatch');
+        const selectedColorText = document.getElementById('selected-color');
+
+        colorSwatches.forEach(swatch => {
+            swatch.addEventListener('click', function () {
+                // 1. ถอดวงแหวน (active) ออกจากทุกปุ่ม
+                colorSwatches.forEach(item => item.classList.remove('active'));
+
+                // 2.ใส่วงแหวน (active) ให้ปุ่มที่เพิ่งคลิก
+                this.classList.add('active');
+
+                // 3. เปลี่ยนข้อความชื่อสี
+                const newColorName = this.getAttribute('data-color-name');
+                selectedColorText.textContent = newColorName;
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

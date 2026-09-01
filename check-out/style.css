@@ -1,0 +1,475 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+}
+
+/* ---------------- Navigation Bar ---------------- */
+.navbar {
+    background-color: #d9d140;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    background-color: #16128c;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* แถบพื้นหลังแคปซูลรวม */
+.nav-links {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    /* สีพื้นหลังแถบรวม */
+    border-radius: 20px;
+    padding: 3px;
+    gap: 2px;
+}
+
+/* ปุ่มปกติที่ยังไม่กด */
+.nav-link {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 6px 16px;
+    border-radius: 17px;
+    background-color: transparent;
+    /* โปร่งใส กลืนไปกับแถบเทาอ่อน */
+    transition: all 0.2s ease;
+}
+
+/* ปุ่มที่ถูกกดอยู่ (Active) */
+.nav-link.active {
+    background-color: black;
+    /* สีเทาเข้มไฮไลท์ */
+    color: #ffffff;
+    /* ตัวหนังสือสีขาว */
+    font-weight: 600;
+}
+
+.nav-link:hover:not(.active) {
+    background-color: white;
+    /* ไฮไลท์เทาอ่อนๆ ตอนเอาเมาส์ชี้ */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    padding: 6px 12px 6px 30px;
+    display: flex;
+    align-items: center;
+    width: 180px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 10px;
+    color: #666;
+    font-size: 12px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 12px;
+    width: 100%;
+}
+
+/* ตกแต่งปุ่มไอคอนที่กดได้ */
+.icon-btn {
+    color: #333333;
+    /* สีไอคอน */
+    font-size: 18px;
+    /* ขนาดไอคอน */
+    text-decoration: none;
+    /* ลบขีดเส้นใต้ */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* เปลี่ยนลูกศรเมาส์เป็นรูปมือ */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Effect เมื่อเอาเมาส์ไปชี้ (Hover) */
+.icon-btn:hover {
+    color: #0066cc;
+    /* เปลี่ยนสีไอคอนเมื่อชี้ */
+    transform: scale(1.15);
+    /* ขยายขนาดขึ้นเล็กน้อย */
+}
+
+/* คอนเทนเนอร์รวมไอคอน */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* ระยะห่างระหว่างปุ่ม */
+}
+
+/* ---------------- Container Layout ---------------- */
+.checkout-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    min-height: calc(100vh - 60px);
+    background-color: transparent;
+}
+
+/* Left Column - Form */
+.form-column {
+    flex: 1;
+    padding: 40px 50px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-top: 24px;
+}
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+/* Input Controls */
+.input-group {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+    background-color: #fff;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #0066cc;
+}
+
+.input-row {
+    display: flex;
+    gap: 12px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #555;
+}
+
+.checkbox-group input {
+    accent-color: #0066cc;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-label {
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    font-size: 10px;
+    color: #888;
+}
+
+.select-wrapper select {
+    padding-top: 16px;
+    padding-bottom: 6px;
+}
+
+/* Shipping Box */
+.shipping-info-box {
+    background-color: #f0f0f0;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.shipping-info-box.empty-box {
+    height: 38px;
+}
+
+/* Payment Section */
+.payment-box {
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.payment-header {
+    background-color: #ebf3ff;
+    padding: 12px 16px;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.payment-title input {
+    accent-color: #0066cc;
+}
+
+.card-icons {
+    display: flex;
+    gap: 6px;
+}
+
+.card-badge {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.card-badge.visa {
+    color: #003399;
+}
+
+.card-badge.amex {
+    color: #006699;
+}
+
+.card-badge.mc {
+    color: #cc0000;
+}
+
+.payment-body {
+    padding: 16px;
+    background-color: #fafafa;
+}
+
+.cod-option {
+    padding: 12px 16px;
+    border-top: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    background-color: #fff;
+}
+
+/* Pay Button */
+.pay-btn {
+    width: 100%;
+    background-color: #16128c;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.pay-btn:hover {
+    background-color: #0052a3;
+}
+
+/* Right Column - Order Summary */
+.summary-column {
+    width: 420px;
+    background-color: transparent;
+    padding: 40px 35px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+    background-color: #d8d8d8;
+    border-radius: 8px;
+    position: relative;
+}
+
+.item-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: #555;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* รายละเอียดชื่อสินค้าและตัวหนังสือ */
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.item-subtitle {
+    font-size: 11px;
+    color: #777777;
+}
+
+.item-price {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Skeleton Lines สำหรับโชว์ Wireframe ขวามือ */
+.skeleton-line {
+    height: 10px;
+    background-color: #333;
+    border-radius: 4px;
+}
+
+.skeleton-line.short {
+    width: 80px;
+}
+
+.skeleton-line.medium {
+    width: 130px;
+}
+
+.skeleton-line.long {
+    width: 180px;
+}
+
+.discount-section {
+    display: flex;
+    gap: 10px;
+    margin: 24px 0;
+}
+
+.discount-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 12px;
+    outline: none;
+    background-color: #fff;
+}
+
+.apply-btn {
+    background-color: #d8d8d8;
+    color: #555;
+    border: none;
+    padding: 0 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ส่วนสรุปราคา */
+.summary-details {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #555555;
+}
+
+.summary-value {
+    font-weight: 500;
+    color: #333333;
+}
+
+/* ยอดรวมสุทธิ (Total) */
+.total-row {
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px dashed #e5e5e5;
+}
+
+.summary-label-total {
+    font-size: 15px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.summary-value-total {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0066cc;
+}

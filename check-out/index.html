@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <!-- FontAwesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ลิงก์ไปยังไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-logo">Logo</div>
+        <nav class="nav-links">
+            <a href="#" class="nav-link active">New Arrivals</a>
+            <a href="#" class="nav-link">Best Seller</a>
+            <a href="#" class="nav-link">League</a>
+            <a href="#" class="nav-link">Collections</a>
+            <a href="#" class="nav-link">On Sale</a>
+        </nav>
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-icons">
+                <!-- ปุ่มหัวใจ (Wishlist) -->
+                <a href="#" class="icon-btn" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+                <!-- ปุ่มตระกร้าสินค้า (Cart) -->
+                <a href="#" class="icon-btn" title="Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+
+                <!-- ปุ่มโปรไฟล์ผู้ใช้ (Account) -->
+                <a href="#" class="icon-btn" title="Account">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Checkout Content -->
+    <main class="checkout-container">
+
+        <!-- Left Column: Form Details -->
+        <section class="form-column">
+
+            <!-- Contact Section -->
+            <h2 class="section-title">Contact</h2>
+            <div class="input-group">
+                <input type="email" value="username@gmail.com">
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="news" checked>
+                <label for="news">Email me with news and offers</label>
+            </div>
+
+            <!-- Delivery Section -->
+            <h2 class="section-title">Delivery</h2>
+            <div class="input-group select-wrapper">
+                <span class="select-label">Country/Region</span>
+                <select>
+                    <option selected>Thailand</option>
+                </select>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <input type="text" placeholder="First name">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Last name">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <input type="text" placeholder="Address">
+            </div>
+
+            <div class="input-group">
+                <input type="text" placeholder="Apartment, suite, etc (optional)">
+            </div>
+
+            <div class="input-row">
+                <div class="input-group"><input type="text"></div>
+                <div class="input-group"><input type="text"></div>
+                <div class="input-group"><input type="text"></div>
+            </div>
+
+            <div class="input-group">
+                <input type="text">
+            </div>
+
+            <!-- Shipping Method Section -->
+            <h2 class="section-title">Shipping method</h2>
+            <div class="input-group">
+                <input type="text" class="shipping-input"
+                    placeholder="Enter your shipping address to view available shipping methods.">
+            </div>
+            <!-- ช่องที่สอง (ช่องว่าง) -->
+            <div class="input-group">
+                <input type="text" class="shipping-input">
+            </div>
+
+            <!-- Payment Section -->
+            <div class="payment-box">
+                <div class="payment-header">
+                    <div class="payment-title">
+                        <input type="radio" name="payment" id="credit" checked>
+                        <label for="credit">Credit Card</label>
+                    </div>
+                    <div class="card-icons">
+                        <span class="card-badge visa">VISA</span>
+                        <span class="card-badge amex">AMEX</span>
+                        <span class="card-badge mc">MC</span>
+                    </div>
+                </div>
+
+                <div class="payment-body">
+                    <div class="input-group">
+                        <input type="text" placeholder="Card Number">
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <input type="text" placeholder="Expiration date (MM/YY)">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Card Number">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Name on card">
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="billing" checked>
+                        <label for="billing">Use shipping address as billing address</label>
+                    </div>
+                </div>
+
+                <div class="cod-option">
+                    <input type="radio" name="payment" id="cod">
+                    <label for="cod">Cash on Delivery (COD)</label>
+                </div>
+            </div>
+
+            <!-- Pay Now Button -->
+            <button class="pay-btn">Pay now</button>
+
+        </section>
+
+        <!-- Right Column: Cart Summary -->
+        <aside class="summary-column">
+
+            <!-- Item 1 -->
+            <div class="cart-item">
+                <div class="item-info">
+                    <div class="item-image">
+                        <span class="item-badge">1</span>
+                    </div>
+                    <div class="item-details">
+                        <span class="item-title">Product Name Example</span>
+                        <span class="item-subtitle">Size / Variant</span>
+                    </div>
+                </div>
+                <span class="item-price">฿1,290.00</span>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="cart-item">
+                <div class="item-info">
+                    <div class="item-image">
+                        <span class="item-badge">1</span>
+                    </div>
+                    <div class="item-details">
+                        <span class="item-title">Another Item Name</span>
+                        <span class="item-subtitle">Color / Spec</span>
+                    </div>
+                </div>
+                <span class="item-price">฿890.00</span>
+            </div>
+
+            <!-- Discount Section -->
+            <div class="discount-section">
+                <input type="text" class="discount-input" placeholder="Discount code or gift card">
+                <button class="apply-btn">Apply</button>
+            </div>
+
+            <!-- Order Breakdown Placeholder -->
+            <div class="summary-details">
+                <div class="summary-row">
+                    <span class="summary-label">Subtotal</span>
+                    <span class="summary-value">฿2,180.00</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Shipping</span>
+                    <span class="summary-value">Calculated at next step</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span class="summary-label-total">Total</span>
+                    <span class="summary-value-total">฿2,180.00</span>
+                </div>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <script>
+        // ดึงปุ่ม nav-link ทั้งหมดมา
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // ป้องกันไม่ให้หน้าเว็บรีเฟรชเมื่อกดลิงก์
+
+                // ลบ class 'active' ออกจากทุกปุ่ม
+                navLinks.forEach(item => item.classList.remove('active'));
+
+                // ใส่ class 'active' ให้ปุ่มที่เพิ่งถูกคลิก
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
