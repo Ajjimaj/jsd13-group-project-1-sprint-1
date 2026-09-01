@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ---------------- Navigation Bar ---------------- -->
+    <header class="navbar">
+        <div class="nav-logo">ZETA</div>
+        <nav class="nav-links">
+            <a href="#" class="nav-link active">New Arrivals</a>
+            <a href="#" class="nav-link">Best Seller</a>
+            <a href="#" class="nav-link">League</a>
+            <a href="#" class="nav-link">Collections</a>
+            <a href="#" class="nav-link">On Sale</a>
+        </nav>
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-icons">
+                <a href="#" class="icon-btn"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#" class="icon-btn"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ---------------- Main Container ---------------- -->
+    <main class="cart-container">
+        <h1 class="page-title">YOUR CART</h1>
+
+        <div class="cart-content">
+            <!-- Left Side: Cart Items List -->
+            <section class="cart-items-box">
+                <!-- ตัวอย่างรายการสินค้า 1 ชิ้น -->
+                <!-- ฝั่งรายการสินค้า (กำหนด data-price) -->
+                <div class="cart-item" data-price="145">
+                    <div class="item-img">
+                        <img src="https://www.arionline.com/cdn/shop/files/ARIKIDSADEPTICONICNATIONTEAMJERSEY-RED_WHITE_RED_AAP3315-52__01.jpg?v=1778917243&width=832"
+                            alt="Gradient Graphic T-shirt">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3 class="item-name">Gradient Graphic T-shirt</h3>
+                            <button class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                        <p class="item-spec"><span>Size:</span> Large</p>
+                        <p class="item-spec"><span>Color:</span> White</p>
+                        <div class="item-bottom">
+                            <span class="item-price">$145</span>
+                            <div class="qty-control">
+                                <button class="qty-btn btn-minus">-</button>
+                                <span class="qty-val">1</span>
+                                <button class="qty-btn btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item" data-price="145">
+                    <div class="item-img">
+                        <img src="https://www.arionline.com/cdn/shop/files/ARI-KIDS-ADEPT-ICONIC-NATION-TEAM-JERSEY---ORANGE_BLACK_ORANGE-_AAP3315-30__01.jpg?v=1778916957&width=832"
+                            alt="Gradient Graphic T-shirt">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3 class="item-name">Gradient Graphic T-shirt</h3>
+                            <button class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                        <p class="item-spec"><span>Size:</span> Large</p>
+                        <p class="item-spec"><span>Color:</span> White</p>
+                        <div class="item-bottom">
+                            <span class="item-price">$145</span>
+                            <div class="qty-control">
+                                <button class="qty-btn btn-minus">-</button>
+                                <span class="qty-val">1</span>
+                                <button class="qty-btn btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="cart-item" data-price="145">
+                    <div class="item-img">
+                        <img src="https://www.arionline.com/cdn/shop/files/ARIADEPTICONICNATIONTEAMJERSEY-WHITE_BLACK_YELLOW_AAP3314-21__01.jpg?v=1778914517&width=832"
+                            alt="Gradient Graphic T-shirt">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <h3 class="item-name">Gradient Graphic T-shirt</h3>
+                            <button class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                        <p class="item-spec"><span>Size:</span> Large</p>
+                        <p class="item-spec"><span>Color:</span> White</p>
+                        <div class="item-bottom">
+                            <span class="item-price">$145</span>
+                            <div class="qty-control">
+                                <button class="qty-btn btn-minus">-</button>
+                                <span class="qty-val">1</span>
+                                <button class="qty-btn btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Side: Order Summary -->
+            <aside class="summary-box">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span class="price-val" id="summary-subtotal">$0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount (-20%)</span>
+                    <span class="price-val discount" id="summary-discount">-$0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <span class="price-val" id="summary-delivery">$15</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span class="price-val total" id="summary-total">$0</span>
+                </div>
+
+                <div class="promo-box">
+                    <div class="promo-input">
+                        <i class="fa-solid fa-tag"></i>
+                        <input type="text" id="promo-code-input" placeholder="Add promo code">
+                    </div>
+                    <!-- ปุ่ม Apply -->
+                    <button type="button" id="apply-btn" class="apply-btn">Apply</button>
+                </div>
+
+                <!-- ปุ่ม Go to Checkout -->
+                <a href="checkout.html" class="checkout-btn">
+                    Go to Checkout <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </aside>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="newsletter-banner">
+            <h2>STAY UPTO DATE ABOUT OUR LASTEST OFFERS</h2>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                <button type="submit" id="subscribe-btn" class="subscribe-btn">
+                    Subscribe to Newsletter
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- ---------------- Footer ---------------- -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-logo">LOGO</h2>
+                <p><i class="fa-solid fa-phone"></i> Call 099-999-9999<br><small>MON - FRY : 09:00 AM - 17:00 PM</small>
+                </p>
+                <p><i class="fa-solid fa-envelope"></i> Email: &lt;name&gt;@gmail.com</p>
+            </div>
+            <div class="footer-links">
+                <h4>Products</h4>
+                <a href="#">New Arrivals</a>
+                <a href="#">Best Seller</a>
+                <a href="#">Collections</a>
+            </div>
+            <div class="footer-links">
+                <h4>About Us</h4>
+            </div>
+            <div class="footer-payment">
+                <h4>We Accepted</h4>
+                <div class="payment-badges">
+                    <span class="badge visa">VISA</span>
+                    <span class="badge discover">DISCOVER</span>
+                    <span class="badge mc">MC</span>
+                    <span class="badge amex">AMEX</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 [Owner Name]
+        </div>
+    </footer>
+
+    <!-- JavaScript สำหรับคลิกสลับปุ่ม Nav Link -->
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                navLinks.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. ระบบกดเพิ่ม-ลด จำนวนสินค้า (+ / -)
+            const qtyControls = document.querySelectorAll('.qty-control');
+
+            qtyControls.forEach(control => {
+                const minusBtn = control.querySelector('.btn-minus');
+                const plusBtn = control.querySelector('.btn-plus');
+                const qtyVal = control.querySelector('.qty-val');
+
+                // กดปุ่ม - (ลดจำนวน แต่ไม่ให้ต่ำกว่า 1)
+                minusBtn.addEventListener('click', () => {
+                    let currentQty = parseInt(qtyVal.textContent);
+                    if (currentQty > 1) {
+                        qtyVal.textContent = currentQty - 1;
+                    }
+                });
+
+                // กดปุ่ม + (เพิ่มจำนวน)
+                plusBtn.addEventListener('click', () => {
+                    let currentQty = parseInt(qtyVal.textContent);
+                    qtyVal.textContent = currentQty + 1;
+                });
+            });
+
+
+            // 2. ระบบกดปุ่มถังขยะเพื่อลบรายการสินค้า
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+
+            deleteButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // ค้นหาแถบสินค้า (.cart-item) ของปุ่มที่ถูกกด
+                    const cartItem = btn.closest('.cart-item');
+                    if (cartItem) {
+                        // เพิ่ม เอฟเฟกต์ค่อยๆ จางก่อนลบ (Optional)
+                        cartItem.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        cartItem.style.opacity = '0';
+                        cartItem.style.transform = 'translateX(-20px)';
+
+                        setTimeout(() => {
+                            cartItem.remove(); // ลบออกจากหน้าเว็บ
+                        }, 300);
+                    }
+                });
+            });
+
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const applyBtn = document.getElementById('apply-btn');
+            const promoInput = document.getElementById('promo-code-input');
+
+            if (applyBtn && promoInput) {
+                applyBtn.addEventListener('click', () => {
+                    const code = promoInput.value.trim();
+
+                    if (code === '') {
+                        alert('กรุณากรอกโค้ดส่วนลดก่อนกด Apply ครับ');
+                    } else {
+                        // เปลี่ยนสถานะปุ่มเมื่อใช้โค้ดสำเร็จ
+                        applyBtn.textContent = 'Applied!';
+                        applyBtn.style.backgroundColor = '#28a745'; // เปลี่ยนเป็นสีเขียว
+                        applyBtn.style.cursor = 'default';
+                        applyBtn.disabled = true;
+
+                        alert(`ใช้งานโค้ดส่วนลด "${code}" เรียบร้อยแล้ว!`);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const DELIVERY_FEE = 15; // ค่าจัดส่งคงที่
+            const DISCOUNT_RATE = 0.20; // ส่วนลด 20%
+
+            // ฟังก์ชันคำนวณยอดรวมใหม่ทั้งหมด
+            function updateCartSummary() {
+                let subtotal = 0;
+                const cartItems = document.querySelectorAll('.cart-item');
+
+                cartItems.forEach(item => {
+                    const price = parseFloat(item.getAttribute('data-price')) || 0;
+                    const qty = parseInt(item.querySelector('.qty-val').textContent) || 0;
+                    subtotal += price * qty;
+                });
+
+                // คำนวณส่วนลดและยอดรวมสุทธิ
+                const discount = subtotal > 0 ? subtotal * DISCOUNT_RATE : 0;
+                const total = subtotal > 0 ? (subtotal - discount + DELIVERY_FEE) : 0;
+
+                // แสดงผลลัพธ์ลงบนหน้าเว็บ
+                document.getElementById('summary-subtotal').textContent = `$${subtotal.toFixed(0)}`;
+                document.getElementById('summary-discount').textContent = `-$${discount.toFixed(0)}`;
+                document.getElementById('summary-delivery').textContent = subtotal > 0 ? `$${DELIVERY_FEE}` : '$0';
+                document.getElementById('summary-total').textContent = `$${total.toFixed(0)}`;
+            }
+
+            // อีเวนต์ปุ่ม เพิ่ม / ลด จำนวนสินค้า
+            document.querySelectorAll('.qty-control').forEach(control => {
+                const minusBtn = control.querySelector('.btn-minus');
+                const plusBtn = control.querySelector('.btn-plus');
+                const qtyVal = control.querySelector('.qty-val');
+
+                minusBtn.addEventListener('click', () => {
+                    let qty = parseInt(qtyVal.textContent);
+                    if (qty > 1) {
+                        qtyVal.textContent = qty - 1;
+                        updateCartSummary();
+                    }
+                });
+
+                plusBtn.addEventListener('click', () => {
+                    let qty = parseInt(qtyVal.textContent);
+                    qtyVal.textContent = qty + 1;
+                    updateCartSummary();
+                });
+            });
+
+            // อีเวนต์ปุ่ม ลบสินค้า (ถังขยะ)
+            document.querySelectorAll('.delete-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const item = btn.closest('.cart-item');
+                    if (item) {
+                        item.remove();
+                        updateCartSummary(); // คำนวณใหม่เมื่อสินค้าถูกลบ
+                    }
+                });
+            });
+
+            // คำนวณยอดเงินครั้งแรกเมื่อเปิดหน้าเว็บ
+            updateCartSummary();
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
